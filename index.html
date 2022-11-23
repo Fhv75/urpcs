@@ -1,0 +1,290 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>URPC'S</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-Zenh87qX5JnK2Jl0vWa8Ck2rdkQ2Bzep5IDxbcnCeuOxjzrPF/et3URy9Bv1WTRi" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.5.2/animate.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.css">
+    <link rel="stylesheet" href="css/style.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <script src="js/session-verif.js"></script>
+    
+</head>
+<body>
+    <section id="header">
+        <nav class="navbar navbar-dark navbar-expand-lg py-3" data-aos="fade-down" data-aos-delay="100">
+            <div class="container">
+                <a class="navbar-brand d-flex align-items-center" href="#">
+                    <img class="logo" src="img/logo.png" width="126" height="132">
+                </a>
+                <button data-bs-toggle="collapse" class="navbar-toggler" data-bs-target="#navcol-2">
+                    <span class="visually-hidden">Toggle navigation</span>
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="navcol-2">
+                    <ul class="navbar-nav ms-auto">
+                        <li class="nav-item"><a class="nav-link active" onClick="goTo('guia-rapida')">Guía Rapida</a></li>
+                        <li class="nav-item"><a class="nav-link active" onClick="goTo('guia-componentes')">Componentes</a></li>
+                        <li class="nav-item"><a class="nav-link active" onClick="goTo('testimonios')">Testimonios</a></li>
+                        <li class="nav-item"><a class="nav-link active" onClick="goTo('footer')">Contacto</a></li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+
+        <div class="container text-center">
+            <h1 class="h-title" data-aos="fade" data-aos-duration="500" data-aos-delay="100">URPC'S</h1>
+            <h3 data-aos="fade" data-aos-duration="500" data-aos-delay="200" class="h-subtitle">¡Arma tu PC con nosotros!</h3>
+            <div class="row">
+                <!--Botones para entrar al modal -->
+                <div class="col text-end text-sm-end p-2">
+                    <button id="logLP" class="btn h-btn" data-aos="zoom-in-right" data-aos-duration="700" data-aos-delay="250" style="background-color: #58C6F0;" type="button" data-bs-toggle="modal" data-bs-target="#login-modal">INICIAR SESIÓN</button></div>
+                <div class="col text-start p-2" style="padding: 9px;">
+                    <button id="regLP" class="btn h-btn" data-aos="zoom-in-left" data-aos-duration="700" data-aos-delay="250" style="background-color: #006CFF;" type="button" data-bs-toggle="modal" data-bs-target="#register-modal" onclick="getFact()">REGISTRARSE</button></div>
+            </div>
+            <p class="h-p" data-aos="fade" data-aos-delay="650">
+                URPC'S es una herramienta que convierte la experiencia de
+                <br>
+                construir tu computador en algo sencillo y directo
+                <br>
+                Solo escoge una gama, ¡Y listo!
+                <br>
+            </p>
+        </div>
+        <div class="modal fade text-nowrap text-dark" role="dialog" tabindex="-1" id="login-modal">
+            <div class="modal-dialog modal-dialog-centered" role="document">
+                <div class="modal-content rounded-5">
+                    <div class="modal-header">
+                        <h3 class="modal-title mb-2 mt-4" style="margin: auto;"><b>Iniciar Sesión</b></h3>
+                    </div>
+                    <div class="modal-body">
+                        <form>
+                            <div id="logResp" class="mx-5 mt-3 mb-4 text-center"></div>
+                            <div class="form-floating mx-5 my-4">
+                                <input class="form-control round-input ps-4" type="email" id="logCorreo" placeholder="ejemplo@gmail.com" name="logCorreo">
+                                <label class="form-label ps-4">Correo Electrónico</label></div>
+                            <div class="form-floating mx-5 my-4">
+                                <input class="form-control round-input ps-4" type="password" id="logPw" placeholder="Password" name="logPw">
+                                <label class="form-label ps-4">Contraseña</label></div>                           
+                            <div class="container text-center mt-4">
+                                
+                                <button id="logSubmit" name="logSubmit" class="btn btn-dark fw-bold mb-5 h-btn" style="background-color: #58C6F0; border-color: #58C6F0;"type="button">
+                                    Iniciar sesión</button>
+                            </div>
+                        </form>
+                    </div>
+                    <div class="modal-footer d-flex justify-content-center text-center">
+                        <p>¿No tienes una cuenta?<a class="ps-2 "data-bs-toggle="modal" data-bs-target="#register-modal" onclick="getFact()">Crea una</a></p>
+                        
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="modal fade text-nowrap text-dark" role="dialog" tabindex="-1" id="register-modal">
+            <div class="modal-dialog modal-dialog-centered" role="document">
+                <div class="modal-content rounded-5">
+                    <div class="modal-header">
+                        <h3 class="modal-title mb-2 mt-4" style="margin: auto;"><b>Registrarse</b></h3>
+                    </div>
+                    <div class="modal-body">
+                        <form>
+                            <div id="regResp" class="mx-5 mt-3 mb-4 text-center"></div>
+                            <div class="form-floating mx-5 my-4">
+                                <input id="regNombre" name="regNombre" class="form-control round-input ps-4" type="text" placeholder="Floripondio Pancracio">
+                                <label class="form-label ps-4">Nombre</label>
+                            </div>
+                            <div class="form-floating mx-5 my-4">
+                                <input id="regCorreo" name="regCorreo" class="form-control round-input ps-4" type="text" placeholder="example@mail.com">
+                                <label class="form-label ps-4">Correo Electrónico</label>
+                            </div>
+                            <div class="form-floating mx-5 my-4">
+                                <input id="regPw" name="regPw" class="form-control round-input ps-4" type="password" placeholder="Password">
+                                <label class="form-label ps-4">Contraseña</label>
+                            </div>
+                            <div class="form-floating mx-5 my-4">
+                                <input id="confPw" name="confPw" class="form-control round-input ps-4" type="password" placeholder="Password">
+                                <label class="form-label ps-4">Confirmar Contraseña</label>
+                            </div>
+                            <div class="text-center mt-4">
+                                <button type="button" id="regSubmit" name="regSubmit" class="btn btn-dark fw-bold mb-5 h-btn" style="background-color: #58C6F0; border-color: #58C6F0;">Registrarse</button>
+                            </div>
+                        </form>
+                    </div>
+
+                    <div class="modal-footer d-flex justify-content-center text-center">
+                        <h6 style="color: grey">¿Sabias que...?</h6>
+                        <br>
+                        <p id="fun-fact" class="mx-5 pb-2"></p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    
+    <main>
+        <section id="guia-rapida">
+            <div class="container py-5">
+                <h2 class="text-center pb-5">Guia rapida</h2>
+                <div id="carouselExampleIndicators" class="carousel slide pb-5" data-bs-ride="true">
+                    <div class="carousel-indicators">
+                        <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+                        <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="1" aria-label="Slide 2"></button>
+                        <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="2" aria-label="Slide 3"></button>
+                </div>
+                <div class="carousel-inner">
+                    <div class="carousel-item active">
+                        <img src="img/grafica.png" class="d-block w-100" height="500" alt="...">
+                    </div>
+                    <div class="carousel-item">
+                        <img src="img/gabinete.png" class="d-block w-100" height="500" alt="...">
+                    </div>
+                    <div class="carousel-item">
+                        <img src="img/procesador.png" class="d-block w-100" height="500" alt="...">
+                    </div>
+                </div>
+                <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="prev">
+                    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                    <span class="visually-hidden">Previous</span>
+                </button>
+                <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="next">
+                    <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                    <span class="visually-hidden">Next</span>
+                </button>
+            </div>
+        </div>
+        </section>
+        
+        <section id="guia-componentes">
+            <h2 class="text-center pt-5">Componentes</h2>
+            <!--   Tarjetas-->
+            <div class="title-cards">
+            </div>
+            <div class="container-card ">
+        
+                <div class="card " style="background-color:black">
+                    <figure>
+                        <img src="./img/grafica.png">
+                    </figure>
+                    <div class="contenido-card">
+                        <h4>Tarjeta Grafica</h4>
+                        <p>La tarjeta grafica es la encargada de transmitir los datos del procesador en imagenes para el usuario</p>
+        
+                    </div>
+                </div>
+                <div class="card" style="background-color:black">
+                    <figure>
+                        <img src="./img/procesador.png">
+                    </figure>
+                    <div class="contenido-card">
+                        <h4>Procesador</h4>
+                        <p>El procesador sera el cerebro encargado de dirigir todas las tareas que lleva a cabo tu equipo </p>
+                    </div>
+                </div>
+                <div class="card" style="background-color:black">
+                    <figure>
+                        <img src="./img/ram.png">
+                    </figure>
+                    <div class="contenido-card">
+                        <h4>Memoria RAM</h4>
+                        <p>La memoria ram es la encargada de guardar informacion de los procesos que lleva a cabo tu equipo</p>
+                    </div>
+                </div>
+                <div class="card" style="background-color:black">
+                    <figure>
+                        <img src="./img/psu.png">
+                    </figure>
+                    <div class="contenido-card">
+                        <h4>Fuente de poder</h4>
+                        <p>La fuente de poder suministra energia a todos los componentes en la placa madre</p>
+                    </div>
+                </div>
+                <div class="card" style="background-color:black">
+                    <figure>
+                        <img src="./img/placa_madre.png">
+                    </figure>
+                    <div class="contenido-card">
+                        <h4>Placa madre</h4>
+                        <p>La placa madre es la encargada de unir los componentes y realiza la comunicacion entre estos</p>
+                    </div>
+                </div>
+                <div class="card" style="background-color:black">
+                    <figure>
+                        <img src="./img/almacenamiento_pc.png">
+                    </figure>
+                    <div class="contenido-card">
+                        <h4>Almacenamiento</h4>
+                        <p>Tenemos 3 tipos de almacenamiento hdd/sdd/ssd nvme , las 3 cumplen con la funcion de almacenar datos de la computadora</p>
+                    </div>
+                </div>
+            </div>
+            <section id="testimonios">
+                <h2 class="titulo text-center pt-5">¿Qué dicen nuestros usuarios?</h2>
+                <br>
+                <br>
+                <br>
+                <div class="cartas">
+                    <div class="carta">
+                        <img src="./img/clienta3.png" alt="">
+                        <div class="contenido-texto-carta">
+                            <h5>Gal gadot</h5>
+                            <p>Gracias a Urpc's pude ensamblar mi computadora sin tener conocimientos previos </p>
+                        </div>
+                    </div>
+                    <div class="carta">
+                        <img src="./img/cliente2.png" alt="">
+                        <div class="contenido-texto-carta">
+                            <h5>Brad Pitt </h5>
+                            <p>No me gustaba el mundo del armado de computadoras pero con Urpc's se me hizo facil , gracias !</p>
+                        </div>
+                    </div>
+                </div>
+            </section>
+        
+
+    </main>
+    <footer id="footer" class="text-center bg-dark">
+        <h5 class="pt-5 pt-lg-5">Para resolver tus dudas contactanos a través de estos medios:</h5>
+        <div class="container text-white pb-4 pb-lg-5">
+            <ul class="list-inline">
+                <li class="list-inline-item me-4">+569133</li>
+                <li class="list-inline-item me-4">urpcs@gmail.com</li>
+                <li class="list-inline-item">600-200-8000</li>
+            </ul>
+            <ul class="list-inline">
+                <li class="list-inline-item me-4">
+                    <a href="https://wa.me/56912345678/">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="1em" height="1em" fill="currentColor" viewBox="0 0 16 16" class="bi bi-whatsapp text-light" style="font-size: 18px;">
+                        <path d="M13.601 2.326A7.854 7.854 0 0 0 7.994 0C3.627 0 .068 3.558.064 7.926c0 1.399.366 2.76 1.057 3.965L0 16l4.204-1.102a7.933 7.933 0 0 0 3.79.965h.004c4.368 0 7.926-3.558 7.93-7.93A7.898 7.898 0 0 0 13.6 2.326zM7.994 14.521a6.573 6.573 0 0 1-3.356-.92l-.24-.144-2.494.654.666-2.433-.156-.251a6.56 6.56 0 0 1-1.007-3.505c0-3.626 2.957-6.584 6.591-6.584a6.56 6.56 0 0 1 4.66 1.931 6.557 6.557 0 0 1 1.928 4.66c-.004 3.639-2.961 6.592-6.592 6.592zm3.615-4.934c-.197-.099-1.17-.578-1.353-.646-.182-.065-.315-.099-.445.099-.133.197-.513.646-.627.775-.114.133-.232.148-.43.05-.197-.1-.836-.308-1.592-.985-.59-.525-.985-1.175-1.103-1.372-.114-.198-.011-.304.088-.403.087-.088.197-.232.296-.346.1-.114.133-.198.198-.33.065-.134.034-.248-.015-.347-.05-.099-.445-1.076-.612-1.47-.16-.389-.323-.335-.445-.34-.114-.007-.247-.007-.38-.007a.729.729 0 0 0-.529.247c-.182.198-.691.677-.691 1.654 0 .977.71 1.916.81 2.049.098.133 1.394 2.132 3.383 2.992.47.205.84.326 1.129.418.475.152.904.129 1.246.08.38-.058 1.171-.48 1.338-.943.164-.464.164-.86.114-.943-.049-.084-.182-.133-.38-.232z"></path>
+                    </svg>
+                </a>
+                </li>
+                <li class="list-inline-item me-4">
+                    <a href="mailto:urpcs@gmail.com">    
+                        <svg xmlns="http://www.w3.org/2000/svg" width="1em" height="1em" fill="currentColor" viewBox="0 0 16 16" class="bi bi-envelope text-light">
+                            <path fill-rule="evenodd" d="M0 4a2 2 0 0 1 2-2h12a2 2 0 0 1 2 2v8a2 2 0 0 1-2 2H2a2 2 0 0 1-2-2V4Zm2-1a1 1 0 0 0-1 1v.217l7 4.2 7-4.2V4a1 1 0 0 0-1-1H2Zm13 2.383-4.708 2.825L15 11.105V5.383Zm-.034 6.876-5.64-3.471L8 9.583l-1.326-.795-5.64 3.47A1 1 0 0 0 2 13h12a1 1 0 0 0 .966-.741ZM1 11.105l4.708-2.897L1 5.383v5.722Z"></path>
+                        </svg>
+                    </a>
+                </li>
+                <li class="list-inline-item">
+                    <a href="tel: 600-200-8000">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="1em" height="1em" fill="currentColor" viewBox="0 0 16 16" class="bi bi-telephone-fill text-light">
+                            <path fill-rule="evenodd" d="M1.885.511a1.745 1.745 0 0 1 2.61.163L6.29 2.98c.329.423.445.974.315 1.494l-.547 2.19a.678.678 0 0 0 .178.643l2.457 2.457a.678.678 0 0 0 .644.178l2.189-.547a1.745 1.745 0 0 1 1.494.315l2.306 1.794c.829.645.905 1.87.163 2.611l-1.034 1.034c-.74.74-1.846 1.065-2.877.702a18.634 18.634 0 0 1-7.01-4.42 18.634 18.634 0 0 1-4.42-7.009c-.362-1.03-.037-2.137.703-2.877L1.885.511z"></path>
+                        </svg>
+                    </a>
+                </li>
+            </ul>
+            <p class="text-muted mb-0">Copyright © 2022 URPC'S</p>
+        </div>
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-OERcA2EqjJCMA+/3y+gxIOqMEjwtxJY7qPCqsdltbNJuaOe923+mo//f6V8Qbsw3" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.js"></script>
+    <script src="js/bs-init.js"></script>
+    <script src="js/registro.js"></script>
+    <script src="js/login.js"></script>
+    <script src="js/index.js"></script>
+</body>
+</html>

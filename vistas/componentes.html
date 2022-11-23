@@ -1,0 +1,451 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>URPC'S</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-iYQeCzEYFbKjA/T2uDLTpkwGzCiq6soy8tYaI1GyVh/UjpbCx/TYkiZhlZB6+fzT" crossorigin="anonymous">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-Zenh87qX5JnK2Jl0vWa8Ck2rdkQ2Bzep5IDxbcnCeuOxjzrPF/et3URy9Bv1WTRi" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.5.2/animate.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.css">
+    <link rel="stylesheet" href="../css/style.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <script src="../js/session-verif.js"></script>
+</head>
+
+<body style="background-color: rgb(236, 236, 236)">
+    <!-- Inicio encabezado -->
+   <section id="cabecera" class="mb-4" >
+        <div class="container">
+            <div class="row align-items-center">
+                <div class="col">
+                    <h1>COMPONENTES</h1>
+                    <h6 id="texto-gama" class="px-1">CATEGORIA: GAMA </h6>
+                </div>
+                <div class="col text-end">
+                    <button type="button" id="cerrar" name="cerrar" class="btn btn-dark fw-bold mb-5 h-btn" style="background-color: #58C6F0; border-color: #58C6F0;">CERRAR SESIÓN</button>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- Fin de encabezado -->
+
+    <!-- Inicio cabeceras -->
+    <section id="header-row" class="px-5">
+        <div class="card-w25 mt-5 mx-5 shadow" style="background-color:white">
+            <div class="row text-center d-none d-lg-flex">
+                <div class="col-3">
+                    <h4 class="pt-3 pb-1 text-dark">COMPONENTE</h4>
+                </div>
+                <div class="col-6">
+                    <h4 class="pt-3 pb-1 text-dark">DESCRIPCIÓN</h4>
+                </div>
+                <div class="col-3">
+                    <h4 class="pt-3 pb-1 text-dark">LINK</h4>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- Fin cabeceras -->
+
+    <!-- Inicio tajeta cpu -->
+    <section id="content" class="px-0 px-md-5 pt-4 py-lg-0">
+        <div class="card-w50 mt-5 mx-0 mx-md-5 bg-white shadow py-3">
+            <div class="row justify-content-center align-items-center g-2 text-dark text-center gy-5 gy-lg-0">
+                <div class="col-lg-3">
+                    <div class="row">
+                        <div class="col-10 ms-4 ps-5">
+                            <img src="../img/icon/CPU.png" class="img-fluid py-3" alt="cpu" width="60%">
+                            <h3 class="pb-2"><b>CPU</b></h3>
+                        </div>
+                        <div class="col-auto py-4 d-none d-xl-flex">
+                            <div class="vr"></div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-6 pt-5 pt-xxl-3">
+                    <div class="row g-5 justify-content-center align-items-center g-2">
+                        <div class="col-lg-3">
+                            <img class="cmp img-fluid w-100 px-5 px-lg-0" alt="cpu">
+                        </div>
+                        <div class="col-9 pb-4">
+                            <span class="text-start"><h3 class="pb-3 contenido"></h3></span>
+                            <table class="table table-responsive text-start">
+                                <tbody class="h6">
+                                    <tr>
+                                        <th scope="row">Socket:</th>
+                                        <td class="contenido"></td>
+                                        <th scope="row">Velocidad Base:</th>
+                                        <td class="contenido"></td>
+                                    </tr>
+                                    <tr>
+                                        <th scope="row">Gráficos Integrados:</th>
+                                        <td class="contenido"></td>
+                                        <th scope="row">Nucleos:</th>
+                                        <td class="contenido"></td>
+                                    </tr>
+                                    <tr>
+                                        <th scope="row">Hilos:</th>
+                                        <td class="contenido"></td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-3">
+                    <span class="h4 contenido">$ 
+                    </span>
+                    <br>
+                    <a class="url" href="">
+                        <img id="cmp-img"class="img-fluid pt-4 pb-5" src="../img/amazon.png" alt="amazon" width="60%">
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- Fin tajeta cpu -->
+
+    <!-- Inicio tajeta mb -->
+    <section id="content" class="px-0 px-md-5 pt-4 py-lg-0">
+        <div class="card-w50 mt-5 mx-0 mx-md-5 bg-white shadow py-3">
+            <div class="row justify-content-center align-items-center g-2 text-dark text-center gy-5 gy-lg-0">
+                <div class="col-lg-3">
+                    <div class="row">
+                        <div class="col-10 ms-4 ps-5">
+                            <img src="../img/icon/Motherboard.png" class="img-fluid py-3" alt="mb" width="60%">
+                            <h3 class="pb-2"><b>PLACA MADRE</b></h3>
+                        </div>
+                        <div class="col-auto py-4 d-none d-xl-flex">
+                            <div class="vr"></div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-6 pt-5 pt-xxl-3">
+                    <div class="row g-5 justify-content-center align-items-center g-2">
+                        <div class="col-lg-3">
+                            <img class="cmp img-fluid w-100 px-5 px-lg-0" alt="mb">
+                        </div>
+                        <div class="col-9 pb-4">
+                            <span class="text-start"><h3 class="pb-3 contenido"></h3></span>
+                            <table class="table table-responsive text-start">
+                                <tbody class="h6">
+                                    <tr>
+                                        <th scope="row">Chipset:</th>
+                                        <td class="contenido"></td>
+                                        <th scope="row">Socket:</th>
+                                        <td class="contenido"></td>
+                                    </tr>
+                                    <tr>
+                                        <th scope="row">Thunderbolt:</th>
+                                        <td class="contenido"></td>
+                                        <th scope="row">Slots de Memoria:</th>
+                                        <td class="contenido"></td>
+                                    </tr>
+                                    <tr>
+                                        <th scope="row">Max. RAM Soportada:</th></th>
+                                        <td class="contenido"></td>
+                                        <th scope="row">Factor Forma:</th>
+                                        <td class="contenido"></td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-3">
+                    <span class="h4 contenido">$ </span>
+                    <br>
+                    <a class="url" href="">
+                        <img id="cmp-img"class="img-fluid pt-4 pb-5" src="../img/amazon.png" alt="amazon" width="60%">
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- Fin tajeta mb -->
+    <!-- Inicio tajeta gpu -->
+    <section id="content" class="px-0 px-md-5 pt-4 py-lg-0">
+        <div class="card-w50 mt-5 mx-0 mx-md-5 bg-white shadow py-3">
+            <div class="row justify-content-center align-items-center g-2 text-dark text-center gy-5 gy-lg-0">
+                <div class="col-lg-3">
+                    <div class="row">
+                        <div class="col-10 ms-4 ps-5">
+                            <img src="../img/icon/GPU.png" class="img-fluid py-3" alt="gpu" width="60%">
+                            <h3 class="pb-2"><b>TARJETA GRÁFICA</b></h3>
+                        </div>
+                        <div class="col-auto py-4 d-none d-xl-flex">
+                            <div class="vr"></div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-6 pt-5 pt-xxl-3">
+                    <div class="row g-5 justify-content-center align-items-center g-2">
+                        <div class="col-lg-3">
+                            <img class="cmp img-fluid w-100 px-5 px-lg-0" alt="gpu">
+                        </div>
+                        <div class="col-9 pb-4">
+                            <span id="nombre" class="text-start"><h3 class="pb-3 contenido"></h3></span>
+                            <table class="table table-responsive text-start">
+                                <tbody class="h6">
+                                    <tr>
+                                        <th scope="row">Resolución:</th>
+                                        <td class="contenido"></td>
+                                        <th scope="row">Frecuencia:</th>
+                                        <td class="contenido"></td>
+                                    </tr>
+                                    <tr>
+                                        <th scope="row">Interfaz:</th>
+                                        <td class="contenido"></td>
+                                        <th scope="row">Memoria:</th>
+                                        <td class="contenido"></td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-3">
+                    <span class="contenido h4" class="h4">$ </span> 
+                    <br>
+                    <a class="url" href="">
+                        <img id="cmp-img"class="img-fluid pt-4 pb-5" src="../img/amazon.png" alt="amazon" width="60%">
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- Fin tajeta gpu -->
+    <!-- Inicio tajeta RAM -->
+    <section id="content" class="px-0 px-md-5 pt-4 py-lg-0">
+        <div class="card-w50 mt-5 mx-0 mx-md-5 bg-white shadow py-3">
+            <div class="row justify-content-center align-items-center g-2 text-dark text-center gy-5 gy-lg-0">
+                <div class="col-lg-3">
+                    <div class="row">
+                        <div class="col-10 ms-4 ps-5">
+                            <img src="../img/icon/RAM.png" class="img-fluid py-3" alt="ram" width="60%">
+                            <h3 class="pb-2"><b>MEMORIA RAM</b></h3>
+                        </div>
+                        <div class="col-auto py-4 d-none d-xl-flex">
+                            <div class="vr"></div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-6 pt-5 pt-xxl-3">
+                    <div class="row g-5 justify-content-center align-items-center g-2">
+                        <div class="col-lg-3">
+                            <img class="cmp img-fluid w-100 px-5 px-lg-0" alt="ram">
+                        </div>
+                        <div class="col-9 pb-4">
+                            <span id="nombre" class="text-start"><h3 class="pb-3 contenido"></h3></span>
+                            <table class="table table-responsive text-start">
+                                <tbody class="h6">
+                                    <tr>
+                                        <th scope="row">Capacidad:</th>
+                                        <td class="contenido"></td>
+                                    </tr>
+                                    <tr>
+                                        <th scope="row">Frecuencia:</th>
+                                        <td class="contenido"></td>
+                                    </tr>
+                                    <tr>
+                                        <th scope="row">Tipo:</th>
+                                        <td class="contenido"></td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-3">
+                    <span class="contenido h4" class="h4">$ </span> 
+                    <br>
+                    <a class="url" href="">
+                        <img id="cmp-img"class="img-fluid pt-4 pb-5" src="../img/amazon.png" alt="amazon" width="60%">
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- Fin tajeta RAM -->
+    <!-- Inicio tajeta almacenamiento -->
+    <section id="content" class="px-0 px-md-5 pt-4 py-lg-0">
+        <div class="card-w50 mt-5 mx-0 mx-md-5 bg-white shadow py-3">
+            <div class="row justify-content-center align-items-center g-2 text-dark text-center gy-5 gy-lg-0">
+                <div class="col-lg-3">
+                    <div class="row">
+                        <div class="col-10 ms-4 ps-5">
+                            <img src="../img/icon/HDD.png" class="img-fluid py-3" alt="alm" width="60%">
+                            <h3 class="pb-2"><b>MEMORIA SECUNDARIA</b></h3>
+                        </div>
+                        <div class="col-auto py-4 d-none d-xl-flex">
+                            <div class="vr"></div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-6 pt-5 pt-xxl-3">
+                    <div class="row g-5 justify-content-center align-items-center g-2">
+                        <div class="col-lg-3">
+                            <img class="cmp img-fluid w-100 px-5 px-lg-0" alt="alm">
+                        </div>
+                        <div class="col-9 pb-4">
+                            <span id="nombre" class="text-start"><h3 class="pb-3 contenido"></h3></span>
+                            <table class="table table-responsive text-start">
+                                <tbody class="h6">
+                                    <tr>
+                                        <th scope="row">Tamaño:</th>
+                                        <td class="contenido"></td>
+                                        <th scope="row">Velocidad de Escritura:</th>
+                                        <td class="contenido"></td>
+                                    </tr>
+                                    <tr>
+                                        <th scope="row">Velocidad de Lectura:</th>
+                                        <td class="contenido"></td>
+                                        <th scope="row">DRAM:</th>
+                                        <td class="contenido"></td>
+                                    </tr>
+                                    <tr>
+                                        <th scope="row">RPM:</th>
+                                        <td class="contenido"></td>
+                                        <th scope="row">Capacidad:</th>
+                                        <td class="contenido"></td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-3">
+                    <span class="contenido h4" class="h4">$ </span> 
+                    <br>
+                    <a class="url" href="">
+                        <img id="cmp-img"class="img-fluid pt-4 pb-5" src="../img/amazon.png" alt="amazon" width="60%">
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- Fin tajeta almacenamiento -->
+    <!-- Inicio tajeta psu -->
+    <section id="content" class="px-0 px-md-5 pt-4 py-lg-0">
+        <div class="card-w50 mt-5 mx-0 mx-md-5 bg-white shadow py-3">
+            <div class="row justify-content-center align-items-center g-2 text-dark text-center gy-5 gy-lg-0">
+                <div class="col-lg-3">
+                    <div class="row">
+                        <div class="col-10 ms-4 ps-5">
+                            <img src="../img/icon/PSU.png" class="img-fluid py-3" alt="psu" width="60%">
+                            <h3 class="pb-2"><b>FUENTE DE PODER</b></h3>
+                        </div>
+                        <div class="col-auto py-4 d-none d-xl-flex">
+                            <div class="vr"></div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-6 pt-5 pt-xxl-3">
+                    <div class="row g-5 justify-content-center align-items-center g-2">
+                        <div class="col-lg-3">
+                            <img class="cmp img-fluid w-100 px-5 px-lg-0" alt="psu">
+                        </div>
+                        <div class="col-9 pb-4">
+                            <span id="nombre" class="text-start"><h3 class="pb-3 contenido"></h3></span>
+                            <table class="table table-responsive text-start">
+                                <tbody class="h6">
+                                    <tr>
+                                        <th scope="row">Potencia:</th>
+                                        <td class="contenido"></td>
+                                    </tr>
+                                    <tr>
+                                        <th scope="row">Certificacion:</th>
+                                        <td class="contenido"></td>
+                                    </tr>
+                                    <tr>
+                                        <th scope="row">Factor Forma:</th>
+                                        <td class="contenido"></td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-3">
+                    <span class="contenido h4" class="h4">$ </span> 
+                    <br>
+                    <a class="url" href="">
+                        <img id="cmp-img"class="img-fluid pt-4 pb-5" src="../img/amazon.png" alt="amazon" width="60%">
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- Fin tajeta psu -->
+    <!-- Inicio tajeta gabinete -->
+    <section id="content" class="px-0 px-md-5 pt-4 py-lg-0">
+        <div class="card-w50 mt-5 mx-0 mx-md-5 bg-white shadow py-3">
+            <div class="row justify-content-center align-items-center g-2 text-dark text-center gy-5 gy-lg-0">
+                <div class="col-lg-3">
+                    <div class="row">
+                        <div class="col-10 ms-4 ps-5">
+                            <img src="../img/icon/Case.png" class="img-fluid py-3" alt="gab" width="60%">
+                            <h3 class="pb-2"><b>GABINETE</b></h3>
+                        </div>
+                        <div class="col-auto py-4 d-none d-xl-flex">
+                            <div class="vr"></div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-6 pt-5 pt-xxl-3">
+                    <div class="row g-5 justify-content-center align-items-center g-2">
+                        <div class="col-lg-3">
+                            <img class="cmp img-fluid w-100 px-5 px-lg-0" alt="gab">
+                        </div>
+                        <div class="col-9 pb-4">
+                            <span id="nombre" class="text-start"><h3 class="pb-3 contenido"></h3></span>
+                            <table class="table table-responsive text-start">
+                                <tbody class="h6">
+                                    <tr>
+                                        <th scope="row">Panel Lateral:</th>
+                                        <td class="contenido"></td>
+                                        <th scope="row">Tamaño:</th>
+                                        <td class="contenido"></td>
+                                    </tr>
+                                    <tr>
+                                        <th scope="row">Iluminacion:</th>
+                                        <td class="contenido"></td>
+                                        <th scope="row">Peso:</th>
+                                        <td><span class="contenido"></span> KG</td>
+                                    </tr>
+                                    <tr>
+                                        <th scope="row">Factor Forma:</th>
+                                        <td class="contenido"></td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-3">
+                    <span class="contenido h4" class="h4">$ </span> 
+                    <br>
+                    <a class="url" href="">
+                        <img id="cmp-img"class="img-fluid pt-4 pb-5" src="../img/amazon.png" alt="amazon" width="60%">
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- Fin tajeta gabinete -->
+
+    <div class="text-center pt-4">
+        <button type="button" id="volver" class="btn btn-dark fw-bold mb-5 h-btn" style="background-color: #58C6F0; border-color: #58C6F0;">VOLVER A ELEGIR OTRA GAMA</button>
+    </div>
+
+    <div class="pb-5"></div>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-u1OknCvxWvY5kfmNBILK2hRnQC3Pr17a+RTT6rIHI7NnikvbZlHgTPOOmMi466C8" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js" integrity="sha384-oBqDVmMz9ATKxIep9tiCxS/Z9fNfEXiDAYTujMAeBAsjFuCZSmKbSSUnQlmh/jp3" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/js/bootstrap.min.js" integrity="sha384-7VPbUDkoPSGFnVtYi0QogXtr74QeVeeIs99Qfg5YCF+TidwNdjvaKZX19NZ/e6oz" crossorigin="anonymous"></script>
+    <script src="../js/cerrarsesion.js"></script>
+    <script src="../js/componentes.js"></script>
+</body>
+</html>
