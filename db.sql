@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Servidor: 127.0.0.1
--- Tiempo de generación: 29-11-2022 a las 19:59:28
+-- Tiempo de generación: 29-11-2022 a las 20:27:22
 -- Versión del servidor: 10.4.24-MariaDB
 -- Versión de PHP: 8.1.6
 
@@ -20,6 +20,8 @@ SET time_zone = "+00:00";
 --
 -- Base de datos: `urpc's`
 --
+CREATE DATABASE IF NOT EXISTS `urpc's` DEFAULT CHARACTER SET utf8mb4 COLLATE utf8mb4_general_ci;
+USE `urpc's`;
 
 -- --------------------------------------------------------
 
