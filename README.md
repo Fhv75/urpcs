@@ -12,13 +12,12 @@
 1. Instalar XAMPP
 2. Descargar el código como ZIP
 3. Extraer el ZIP dentro del directorio C:\xampp\htdocs
-4. Iniciar XAMPP como administrador y activar los modulos "Apache" y "MySQL"
+4. Cambiar el nombre de la carpeta "urpcs-main" a "urpcs"
+5. Iniciar XAMPP como administrador y activar los modulos "Apache" y "MySQL"
 6. Abrir el navegador e ingresar a la url "localhost/phpmyadmin"
 7. Hacer click en "importar"
 8. Clickear en "Examinar" y subir el archivo db.sql
-8. Entrar a la url "localhost/urpcs"
-
-**IMPORTANTE: NO CAMBIAR EL NOMBRE DE LA CARPETA "urpcs"**
+9. Entrar a la url "localhost/urpcs"
 
 ## Funcionalidades
 
