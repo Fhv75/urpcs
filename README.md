@@ -18,6 +18,8 @@
 8. Clickear en "Examinar" y subir el archivo db.sql
 8. Entrar a la url "localhost/urpcs"
 
+**IMPORTANTE: NO CAMBIAR EL NOMBRE DE LA CARPETA "urpcs"**
+
 ## Funcionalidades
 
 - Registro, Inicio y Cierre de Sesión
