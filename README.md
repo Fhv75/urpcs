@@ -16,7 +16,7 @@
 5. Iniciar XAMPP como administrador y activar los modulos "Apache" y "MySQL"
 6. Abrir el navegador e ingresar a la url "localhost/phpmyadmin"
 7. Hacer click en "importar"
-8. Clickear en "Examinar" y subir el archivo db.sql
+8. Hacer click en "Examinar" y subir el archivo db.sql
 9. Entrar a la url "localhost/urpcs"
 
 ## Funcionalidades
