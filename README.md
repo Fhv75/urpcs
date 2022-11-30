@@ -2,7 +2,7 @@
  Repositorio del Web Scraper de la aplicación URPC'S
 
  URPC'S es una aplicación construida con HTML, Bootstrap 5.2 y CSS para el front-end, PHP y MySQL para el back-end, y JS como intermediario.
- Tiene el objetivo de facilitar la elección de componentes de hardware para que un usuario sin conocimientos sea capaz de ensamblar su propio computador.
+ Tiene el objetivo de facilitar la elección de componentes de hardware para un usuario sin conocimientos que desea ensamblar su propio computador.
 
 ## Requisitos
 - XAMPP
