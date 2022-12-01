@@ -1,4 +1,4 @@
-# URPC'S Scraper
+# URPC'S
  Repositorio del Web Scraper de la aplicación URPC'S
 
  URPC'S es una aplicación construida con HTML, Bootstrap 5.2 y CSS para el front-end, PHP y MySQL para el back-end, y JS como intermediario.
