@@ -1,5 +1,5 @@
 # URPC'S
- Repositorio del Web Scraper de la aplicación URPC'S
+ Repositorio de la aplicación URPC'S
 
  URPC'S es una aplicación construida con HTML, Bootstrap 5.2 y CSS para el front-end, PHP y MySQL para el back-end, y JS como intermediario.
  Tiene el objetivo de facilitar la elección de componentes de hardware para un usuario sin conocimientos que desea ensamblar su propio computador.
@@ -15,7 +15,7 @@
 4. Cambiar el nombre de la carpeta "urpcs-main" a "urpcs"
 5. Iniciar XAMPP como administrador y activar los modulos "Apache" y "MySQL"
 6. Abrir el navegador e ingresar a la url "localhost/phpmyadmin"
-7. Hacer click en "importar"
+7. Hacer click en "Importar"
 8. Hacer click en "Examinar" y subir el archivo db.sql
 9. Entrar a la url "localhost/urpcs"
 
